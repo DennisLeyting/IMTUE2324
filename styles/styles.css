@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0 auto;
+  width: 80%;
+  height: 80px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: auto 10px;
+}
+
+nav ul li p {
+  border-bottom: 2px solid black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: flex;
+}
+
+.icon {
+  height: 50px;
+}
+
+#logo {
+  height: 100%;
+}
