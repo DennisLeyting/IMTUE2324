@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(124, 128, 128));
 }
 
 header {
   margin: 0 auto;
   width: 80%;
   height: 80px;
-  background-color: lightblue;
   display: flex;
   justify-content: space-between;
 }
@@ -36,4 +36,69 @@ nav ul li a {
 
 #logo {
   height: 100%;
+}
+
+main form {
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  width: 40%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+#voornaam {
+  grid-column: 1 / span 2;
+}
+
+#tussenvoegsel {
+  grid-column: 3 / span 1;
+}
+
+#achternaam {
+  grid-column: 1 / span 2;
+}
+
+#telefoonnummer {
+  grid-column: 1 / span 1;
+}
+
+#emailadres {
+  grid-column: 2 / span 2;
+}
+
+#straat {
+  grid-column: 1 / span 2;
+}
+
+#postcode {
+  grid-column: 1;
+}
+
+#woonplaats {
+  grid-column: 2 / span 2;
+}
+
+#extra_bescherming {
+  grid-column: 1;
+}
+
+#submit {
+  grid-row: 10 / span 1;
+  grid-column: 3 / span 1;
+}
+
+main form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+main form label {
+  text-align: left;
 }
