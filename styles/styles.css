@@ -1,17 +1,23 @@
+/* Resetten van standaard marges en padding */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(124, 128, 128));
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgb(12, 12, 12), rgb(124, 128, 128));
+  color: #000000; /* Standaardtekstkleur */
 }
 
+/* Stijlen voor de header */
 header {
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   height: 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Verticaal centreren */
 }
 
+/* Stijlen voor de navigatie */
 nav ul {
   list-style: none;
   display: flex;
@@ -28,6 +34,7 @@ nav ul li p {
 nav ul li a {
   text-decoration: none;
   display: flex;
+  color: #fff; /* Linktekstkleur */
 }
 
 .icon {
@@ -38,14 +45,38 @@ nav ul li a {
   height: 100%;
 }
 
-main form {
-  margin: 0 auto;
-  background-color: #f2f2f2;
-  width: 40%;
+fieldset {
+  border: 2px solid #ccc; /* Rand om het veldset met een lichte grijze kleur */
+  margin-bottom: 20px; /* Ruimte onderaan elke fieldset */
+  padding: 20px; /* Ruimte binnen de fieldset */
+  border-radius: 5px; /* Afgeronde hoeken voor de fieldset */
+  background-color: #fff; /* Achtergrondkleur van de fieldset */
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
+}
+
+legend {
+  font-weight: bold; /* Vetgedrukte tekst voor de legenda */
+  color: #333; /* Tekstkleur voor de legenda */
+  padding: 0 10px; /* Ruimte rondom de legenda tekst */
+  background-color: #f2f2f2; /* Achtergrondkleur voor de legenda */
+  border: 1px solid #ccc; /* Rand om de legenda met een lichte grijze kleur */
+  border-radius: 5px; /* Afgeronde hoeken voor de legenda */
+  margin-bottom: 10px; /* Ruimte onderaan de legenda */
+}
+
+/* Stijlen voor het hoofdgedeelte */
+main {
+  margin: 20px auto;
+  width: 65%;
+}
+
+form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 #voornaam {
@@ -84,11 +115,41 @@ main form {
   grid-column: 1;
 }
 
+#second_protection_option {
+  grid-column: 2 / span 2;
+}
+
+#verhuisdeken {
+  grid-column: 1 / span 1;
+}
+
 #submit {
   grid-row: 10 / span 1;
   grid-column: 3 / span 1;
 }
 
+/* Stijlen voor de submit knop */
+#submit input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff; /* Achtergrondkleur van de knop */
+  color: #fff; /* Tekstkleur van de knop */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Vloeiende overgang voor hover-effect */
+
+  /* Optioneel: Schaduw voor een verhoogd effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijlen voor de hover-effect van de submit knop */
+#submit input[type="submit"]:hover {
+  background-color: #0056b3; /* Achtergrondkleur veranderen bij hover */
+}
+
+/* Stijlen voor de formuliervelden */
 main form input {
   width: 100%;
   padding: 12px 20px;
@@ -101,4 +162,123 @@ main form input {
 
 main form label {
   text-align: left;
+}
+
+/* Stijl voor dropdown met pijl */
+main form select {
+  appearance: none;
+  padding: 12px;
+  margin: 5px 0px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' width='24px' height='24px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Stijl voor hover-effect */
+main form select:hover {
+  border-color: #666;
+}
+
+/* Stijl voor focus-effect */
+main form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Stijl voor dropdown opties */
+main form option {
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Stijl voor geselecteerde optie */
+main form option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.Rijbewijs-section {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.rijbewijs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 85%;
+  }
+  fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+    height: 400px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
 }

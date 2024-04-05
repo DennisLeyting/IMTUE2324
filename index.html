@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/main.js"></script>
     <title>IMTUE</title>
   </head>
   <body>
@@ -11,15 +12,19 @@
       <section>
         <div id="hamburger"></div>
         <a href="">
-          <img id="logo" src="./img/pngwing.png" alt="logo van Sixt" />
+          <img id="logo" src="./img/SixtLogo.jpg" alt="logo van Sixt" />
         </a>
       </section>
       <nav>
         <ul>
           <li>
             <a href="">
-              <img class="icon" src="./img/car.png" alt="car icon" />
               <p>Boekingen beheren</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Taal Kiezen</p>
             </a>
           </li>
           <li>
@@ -32,281 +37,315 @@
       </nav>
     </header>
     <main>
-      <form action="/submit" method="post">
-        <section id="voornaam">
-          <label for="voornaam">Voornaam:</label><br />
-          <input
-            type="text"
-            name="voornaam"
-            maxlength="40"
-            placeholder="Vul uw voornaam in"
-            required
-            aria-required="true"
-            aria-label="Voornaam"
-          /><br /><br />
-        </section>
-        <section id="tussenvoegsel">
-          <label for="tussenvoegsel">Tussenvoegsel:</label><br />
-          <input
-            type="text"
-            name="tussenvoegsel"
-            maxlength="10"
-            placeholder="Tussenvoegsel"
-            aria-label="Tussenvoegsel"
-          /><br /><br />
-        </section>
-        <section id="achternaam">
-          <label for="achternaam">Achternaam:</label><br />
-          <input
-            type="text"
-            name="achternaam"
-            maxlength="40"
-            placeholder="Vul uw achternaam in"
-            required
-            aria-required="true"
-            aria-label="Achternaam"
-          /><br /><br />
-        </section>
-        <section id="geslacht">
-          <label for="geslacht">Aanhef:</label><br />
-          <select
-            name="geslacht"
-            required
-            aria-required="true"
-            aria-label="Geslacht"
-          >
-            <option value="man">Dhr</option>
-            <option value="vrouw">Mevr</option>
-            <option value="anders">Anders</option></select
-          ><br /><br />
-        </section>
-        <section id="telefoonnummer">
-          <label for="telefoonnummer">Telefoonnummer:</label><br />
-          <input
-            type="text"
-            name="telefoonnummer"
-            maxlength="12"
-            placeholder="Vul uw telefoonnummer in"
-            required
-            aria-required="true"
-            aria-label="Telefoonnummer"
-          /><br /><br />
-        </section>
-        <section id="emailadres">
-          <label for="emailadres">Emailadres:</label><br />
-          <input
-            type="email"
-            name="emailadres"
-            maxlength="50"
-            placeholder="Vul uw emailadres in"
-            required
-            aria-required="true"
-            aria-label="Emailadres"
-          /><br /><br />
-        </section>
-        <section id="straat">
-          <label for="straat">Straat:</label><br />
-          <input
-            type="text"
-            name="straat"
-            maxlength="40"
-            placeholder="Vul uw straatnaam in"
-            required
-            aria-required="true"
-            aria-label="Straat"
-          /><br /><br />
-        </section>
-        <section id="huisnummer">
-          <label for="huisnummer">Huisnummer:</label><br />
-          <input
-            type="text"
-            name="huisnummer"
-            maxlength="10"
-            placeholder="Vul uw huisnummer in"
-            required
-            aria-required="true"
-            aria-label="Huisnummer"
-          /><br /><br />
-        </section>
-        <section id="postcode">
-          <label for="postcode">Postcode:</label><br />
-          <input
-            type="text"
-            name="postcode"
-            maxlength="8"
-            placeholder="Vul uw postcode in"
-            required
-            aria-required="true"
-            aria-label="Postcode"
-          /><br /><br />
-        </section>
-        <section id="woonplaats">
-          <label for="woonplaats">Woonplaats:</label><br />
-          <input
-            type="text"
-            name="woonplaats"
-            maxlength="40"
-            placeholder="Vul uw woonplaats in"
-            required
-            aria-required="true"
-            aria-label="Woonplaats"
-          /><br /><br />
-        </section>
-        <section>
-          <label for="kenteken">Kenteken:</label><br />
-          <input
-            type="text"
-            id="kenteken"
-            name="kenteken"
-            maxlength="10"
-            placeholder="Vul uw kenteken in"
-            required
-            aria-required="true"
-            aria-label="Kenteken"
-          /><br /><br />
-        </section>
-        <section>
-          <label for="gewenste_m2">Gewenste m2:</label><br />
-          <input
-            type="number"
-            id="gewenste_m2"
-            name="gewenste_m2"
-            min="0"
-            placeholder="Vul uw gewenste m2 in"
-            required
-            aria-required="true"
-            aria-label="Gewenste m2"
-          /><br /><br />
-        </section>
-        <section>
-          <label for="reikwijdte">Reikwijdte:</label><br />
-          <input
-            type="number"
-            id="reikwijdte"
-            name="reikwijdte"
-            min="0"
-            placeholder="Vul uw reikwijdte in"
-            required
-            aria-required="true"
-            aria-label="Reikwijdte"
-          /><br /><br />
-        </section>
-        <section>
-          <label for="extra_bestuurder">Extra bestuurder:</label><br />
-          <select
-            id="extra_bestuurder"
-            name="extra_bestuurder"
-            required
-            aria-required="true"
-            aria-label="Extra bestuurder"
-          >
-            <option value="ja">Ja</option>
-            <option value="nee">Nee</option></select
-          ><br /><br />
-        </section>
-
-        <section>
-          <label for="elektrisch">Elektrisch:</label><br />
-          <select
-            id="elektrisch"
-            name="elektrisch"
-            required
-            aria-required="true"
-            aria-label="Elektrisch"
-          >
-            <option value="ja">Ja</option>
-            <option value="nee">Nee</option></select
-          ><br /><br />
-        </section>
-
-        <section>
-          <label for="soort_auto">Soort auto:</label><br />
-          <select
-            id="soort_auto"
-            name="soort_auto"
-            required
-            aria-required="true"
-            aria-label="Soort auto"
-          >
-            <option value="type1">Type 1</option>
-            <option value="type2">Type 2</option>
-            <!-- Voeg meer opties toe indien nodig --></select
-          ><br /><br />
-        </section>
-        <section>
-          <label for="huurdatum">Huurdatum:</label><br />
-          <input
-            type="date"
-            id="huurdatum"
-            name="huurdatum"
-            required
-            aria-required="true"
-            aria-label="Huurdatum"
-          /><br /><br />
-        </section>
-        <section>
-          <label for="inleverdatum">Inleverdatum:</label><br />
-          <input
-            type="date"
-            id="inleverdatum"
-            name="inleverdatum"
-            required
-            aria-required="true"
-            aria-label="Inleverdatum"
-          /><br /><br />
-        </section>
-        <section id="extra_bescherming">
-          <label for="extra_bescherming">Extra bescherming:</label><br />
-          <select
-            name="extra_bescherming"
-            required
-            aria-required="true"
-            aria-label="Extra bescherming"
-          >
-            <option value="ja">Ja</option>
-            <option value="nee">Nee</option></select
-          ><br /><br />
-        </section>
-        <section>
-          <label for="verhuisdeken">Verhuisdeken:</label><br />
-          <select
-            id="verhuisdeken"
-            name="verhuisdeken"
-            required
-            aria-required="true"
-            aria-label="Verhuisdeken"
-          >
-            <option value="ja">Ja</option>
-            <option value="nee">Nee</option></select
-          ><br /><br />
-        </section>
-        <section>
-          <label for="rijbewijs">Rijbewijs:</label><br />
-          <input
-            type="checkbox"
-            id="rijbewijs_a"
-            name="rijbewijs[]"
-            value="A"
-          />
-          <label for="rijbewijs_a">A</label><br />
-          <input
-            type="checkbox"
-            id="rijbewijs_b"
-            name="rijbewijs[]"
-            value="B"
-          />
-          <label for="rijbewijs_b">B</label><br />
-          <input
-            type="checkbox"
-            id="rijbewijs_c"
-            name="rijbewijs[]"
-            value="C"
-          />
-          <label for="rijbewijs_c">C</label><br />
-          <!-- Voeg meer rijbewijs opties toe indien nodig -->
-
-          <br /><br />
-        </section>
+      <form action="/submit" method="post" id="myForm">
+        <fieldset>
+          <legend>Persoonlijke gegevens</legend>
+          <section id="voornaam">
+            <label for="voornaam">Voornaam:</label><br />
+            <input
+              type="text"
+              name="voornaam"
+              maxlength="40"
+              placeholder="Vul uw voornaam in"
+              required
+              aria-required="true"
+              aria-label="Voornaam"
+            /><br /><br />
+          </section>
+          <section id="tussenvoegsel">
+            <label for="tussenvoegsel">Tussenvoegsel:</label><br />
+            <input
+              type="text"
+              name="tussenvoegsel"
+              maxlength="10"
+              placeholder="Tussenvoegsel"
+              aria-label="Tussenvoegsel"
+            /><br /><br />
+          </section>
+          <section id="achternaam">
+            <label for="achternaam">Achternaam:</label><br />
+            <input
+              type="text"
+              name="achternaam"
+              maxlength="40"
+              placeholder="Vul uw achternaam in"
+              required
+              aria-required="true"
+              aria-label="Achternaam"
+            /><br /><br />
+          </section>
+          <section id="geslacht">
+            <label for="geslacht">Geslacht:</label><br />
+            <select
+              name="geslacht"
+              required
+              aria-required="true"
+              aria-label="Geslacht"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="man">Dhr</option>
+              <option value="vrouw">Mevr</option>
+              <option value="anders">Anders</option></select
+            ><br /><br />
+          </section>
+        </fieldset>
+        <fieldset>
+          <legend>Contact gegevens</legend>
+          <section id="telefoonnummer">
+            <label for="telefoonnummer">Telefoonnummer:</label><br />
+            <input
+              type="text"
+              name="telefoonnummer"
+              maxlength="12"
+              placeholder="Vul uw telefoonnummer in"
+              required
+              aria-required="true"
+              aria-label="Telefoonnummer"
+            /><br /><br />
+          </section>
+          <section id="emailadres">
+            <label for="emailadres">Emailadres:</label><br />
+            <input
+              type="email"
+              name="emailadres"
+              maxlength="50"
+              placeholder="Vul uw emailadres in"
+              required
+              aria-required="true"
+              aria-label="Emailadres"
+            /><br /><br />
+          </section>
+          <section id="straat">
+            <label for="straat">Straat:</label><br />
+            <input
+              type="text"
+              name="straat"
+              maxlength="40"
+              placeholder="Vul uw straatnaam in"
+              required
+              aria-required="true"
+              aria-label="Straat"
+            /><br /><br />
+          </section>
+          <section id="huisnummer">
+            <label for="huisnummer">Huisnummer:</label><br />
+            <input
+              type="text"
+              name="huisnummer"
+              maxlength="10"
+              placeholder="Vul uw huisnummer in"
+              required
+              aria-required="true"
+              aria-label="Huisnummer"
+            /><br /><br />
+          </section>
+          <section id="postcode">
+            <label for="postcode">Postcode:</label><br />
+            <input
+              type="text"
+              name="postcode"
+              maxlength="8"
+              placeholder="Vul uw postcode in"
+              required
+              aria-required="true"
+              aria-label="Postcode"
+            /><br /><br />
+          </section>
+          <section id="woonplaats">
+            <label for="woonplaats">Woonplaats:</label><br />
+            <input
+              type="text"
+              name="woonplaats"
+              maxlength="40"
+              placeholder="Vul uw woonplaats in"
+              required
+              aria-required="true"
+              aria-label="Woonplaats"
+            /><br /><br />
+          </section>
+        </fieldset>
+        <fieldset>
+          <legend>overig</legend>
+          <section>
+            <label for="kenteken">Kenteken:</label><br />
+            <input
+              type="text"
+              id="kenteken"
+              name="kenteken"
+              maxlength="10"
+              placeholder="Vul uw kenteken in"
+              required
+              aria-required="true"
+              aria-label="Kenteken"
+            /><br /><br />
+          </section>
+          <section>
+            <label for="gewenste_m2">Gewenste oppervlakte:</label><br />
+            <input
+              type="number"
+              id="gewenste_m2"
+              name="gewenste_m2"
+              min="0"
+              placeholder="Vul uw gewenste m2 in"
+              required
+              aria-required="true"
+              aria-label="Gewenste m2"
+            /><br /><br />
+          </section>
+          <section>
+            <label for="reikwijdte">Reikwijdte:</label><br />
+            <input
+              type="number"
+              id="reikwijdte"
+              name="reikwijdte"
+              min="0"
+              placeholder="Vul uw reikwijdte in"
+              required
+              aria-required="true"
+              aria-label="Reikwijdte"
+            /><br /><br />
+          </section>
+          <section>
+            <label for="extra_bestuurder">Extra bestuurder:</label><br />
+            <select
+              id="extra_bestuurder"
+              name="extra_bestuurder"
+              required
+              aria-required="true"
+              aria-label="Extra bestuurder"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="ja">Ja</option>
+              <option value="nee">Nee</option></select
+            ><br /><br />
+          </section>
+          <section>
+            <label for="elektrisch">Elektrisch:</label><br />
+            <select
+              id="elektrisch"
+              name="elektrisch"
+              required
+              aria-required="true"
+              aria-label="Elektrisch"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="ja">Ja</option>
+              <option value="nee">Nee</option></select
+            ><br /><br />
+          </section>
+          <section>
+            <label for="soort_auto">Soort auto:</label><br />
+            <select
+              id="soort_auto"
+              name="soort_auto"
+              required
+              aria-required="true"
+              aria-label="Soort auto"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="type1">2 zitter</option>
+              <option value="type2">4 zitter</option>
+              <option value="type2">Optie 3</option>
+              <option value="type2">Optie 4</option>
+              <!-- Voeg meer opties toe indien nodig --></select
+            ><br /><br />
+          </section>
+          <section>
+            <label for="huurdatum">Huurdatum:</label><br />
+            <input
+              type="date"
+              id="huurdatum"
+              name="huurdatum"
+              required
+              aria-required="true"
+              aria-label="Huurdatum"
+            /><br /><br />
+          </section>
+          <section>
+            <label for="inleverdatum">Inleverdatum:</label><br />
+            <input
+              type="date"
+              id="inleverdatum"
+              name="inleverdatum"
+              required
+              aria-required="true"
+              aria-label="Inleverdatum"
+            /><br /><br />
+          </section>
+          <section id="extra_bescherming">
+            <label for="extra_bescherming">Extra bescherming:</label><br />
+            <select
+              id="extra_bescherming_select"
+              name="extra_bescherming"
+              required
+              aria-required="true"
+              aria-label="Extra bescherming"
+              onchange="showSecondProtectionOption()"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="ja">Ja</option>
+              <option value="nee">Nee</option></select
+            ><br /><br />
+          </section>
+          <section id="second_protection_option" style="display: none">
+            <label for="second_protection">Soort bescherming:</label><br />
+            <select
+              id="second_protection_select"
+              name="second_protection"
+              aria-label="Soort bescherming"
+            >
+              <option value="" disabled selected>
+                Selecteer een soort bescherming
+              </option>
+              <option value="Basic">Basic</option>
+              <option value="Smart">Smart</option>
+              <option value="Inclusive">Inclusive</option></select
+            ><br /><br />
+          </section>
+          <section id="verhuisdeken">
+            <label for="verhuisdeken">Verhuisdeken:</label><br />
+            <select
+              id="verhuisdeken"
+              name="verhuisdeken"
+              required
+              aria-required="true"
+              aria-label="Verhuisdeken"
+            >
+              <option value="" disabled selected>Selecteer een optie</option>
+              <option value="ja">Ja</option>
+              <option value="nee">Nee</option></select
+            ><br /><br />
+          </section>
+          <section id="rijbewijs">
+            <label for="rijbewijs">Rijbewijs</label><br />
+            <section class="rijbewijs-container">
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                A
+              </label>
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                B
+              </label>
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                C
+              </label>
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                D
+              </label>
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                E
+              </label>
+              <label class="Rijbewijs-section">
+                <input type="checkbox" name="checkbox" />
+                F
+              </label>
+            </section>
+          </section>
+        </fieldset>
         <section id="submit">
           <input type="submit" value="Verzenden" aria-label="Verzenden" />
         </section>
